@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campos Automation | AI-receptionist voor zorg en beauty in Den Haag</title>
+<meta name="description" content="Campos Automation bouwt AI-receptionisten die 24/7 de telefoon opnemen, afspraken inplannen en een SMS-bevestiging sturen. Voor praktijken en salons in Den Haag, Rijswijk en Voorburg.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/logo-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="concept-bar">Conceptontwerp door Studio Annema, niet de officiële website. De echte site staat op <a href="https://camposautomation.nl/">camposautomation.nl</a>.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo-256.png" alt="">Campos Automation</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hoe-het-werkt">Hoe het werkt</a></li>
+      <li><a href="voor-zorgpraktijken.html">Zorgpraktijken</a></li>
+      <li><a href="voor-beauty-en-wellness.html">Beauty &amp; wellness</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-sm" href="#contact">Plan een gratis demo <span class="arr">→</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">AI-receptionist · Den Haag, Rijswijk, Voorburg</p>
+      <h1>De telefoon gaat. <em>Er wordt opgenomen.</em></h1>
+      <p class="lead">Campos Automation bouwt AI-receptionisten voor lokale ondernemers. Ze nemen 24/7 je telefoon op, plannen afspraken in en sturen de klant meteen een SMS-bevestiging. Jij blijft bij je klant.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#contact">Plan een gratis demo <span class="arr">→</span></a>
+        <a class="link" href="#hoe-het-werkt">Zo werkt het</a>
+      </div>
+      <div class="hero-facts">
+        <span><b>24/7</b> bereikbaar</span>
+        <span>live in <b>5 werkdagen</b></span>
+        <span>vanaf <b>€149</b> p/m</span>
+      </div>
+    </div>
+
+    <div class="register" aria-label="Voorbeeld van een belregister: oproepen die de AI-receptionist op één dag afhandelt">
+      <div class="reg-head">
+        <span class="reg-title">Belregister</span>
+        <span class="reg-clock">dinsdag · <span id="reg-clock">07:52</span></span>
+      </div>
+      <ol class="reg-rows" id="reg-rows" aria-live="off"></ol>
+      <div class="reg-foot">
+        <span>Voorbeeld · fysio</span>
+        <span><span id="reg-count">0</span> afgehandeld · <b>0 gemist</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAGSTROOK -->
+<section class="navy on-navy" id="probleem">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Het probleem</p>
+        <h2>Je telefoon gaat precies <em>als je handen vol zijn.</em></h2>
+      </div>
+      <p class="lead">Een fysiotherapeut met een patiënt op tafel of een kapper midden in een kleuring kan niet opnemen. Daar doe je niets verkeerd mee, en toch belt die nieuwe klant daarna de zaak verderop.</p>
+    </div>
+
+    <div class="day rv">
+      <div class="day-controls">
+        <div class="toggle" role="group" aria-label="Vergelijk een werkdag">
+          <button type="button" data-mode="without" aria-pressed="true">Zonder Campos</button>
+          <button type="button" data-mode="with" aria-pressed="false">Met Campos</button>
+        </div>
+        <div class="day-legend">
+          <span><i class="lg block"></i>behandeling</span>
+          <span><i class="lg miss"></i>gemist</span>
+          <span><i class="lg ok"></i>opgenomen</span>
+        </div>
+      </div>
+      <div class="strip" id="strip" aria-hidden="true"></div>
+      <div class="hours" id="hours" aria-hidden="true"></div>
+
+      <div class="day-result">
+        <div><span class="big" id="d-total">17</span><p>oproepen op een gewone dinsdag bij een drukke praktijk.</p></div>
+        <div><span class="big signal" id="d-miss">13</span><p id="d-miss-lbl">oproepen vallen tijdens een behandeling of na sluitingstijd.</p></div>
+        <div><span class="big">85%</span><p>van de bellers die op de voicemail uitkomen, belt niet nog een keer.</p></div>
+      </div>
+      <p class="source">Voorbeelddag ter illustratie. 85%: onderzoek naar zakelijke bereikbaarheid, zoals aangehaald door Campos Automation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBEER HET ZELF -->
+<section id="probeer">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Probeer het zelf</p>
+        <h2>Bel de praktijk. <em>Om 23:04, of wanneer je wilt.</em></h2>
+      </div>
+      <p class="lead">Kies wat je als beller wilt en zie hoe de AI-receptionist het afhandelt: in je agenda en met een SMS naar de klant.</p>
+    </div>
+
+    <div class="sim rv">
+      <div class="call" aria-label="Gesimuleerd telefoongesprek">
+        <div class="call-head">
+          <div><span class="call-name">Praktijk Van Dijk</span><span class="call-state" id="call-state">Klaar om te bellen</span></div>
+          <span class="call-timer mono" id="call-timer">0:00</span>
+        </div>
+        <div class="call-log" id="call-log" aria-live="polite">
+          <div class="call-idle" id="call-idle">
+            <button class="dial" id="dial" type="button"><span class="dial-icon" aria-hidden="true">✆</span> Bel de praktijk</button>
+            <p>Gesimuleerd gesprek. In een echte demo bel je de AI-receptionist zelf.</p>
+          </div>
+        </div>
+        <div class="call-choices" id="call-choices"></div>
+      </div>
+
+      <div class="sim-side">
+        <div class="agenda">
+          <div class="agenda-head"><span class="reg-title">Agenda</span><span class="mono" style="color:var(--muted);font-size:13px">deze week</span></div>
+          <ul id="agenda">
+            <li><span class="mono">di 10:30</span><span>J. de Wit · controle</span></li>
+            <li><span class="mono">wo 13:00</span><span>S. Bakker · behandeling</span></li>
+            <li><span class="mono">do 11:15</span><span>R. Timmer · behandeling</span></li>
+          </ul>
+        </div>
+        <div class="phone" aria-label="Telefoon van de beller">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen" id="phone-screen">
+            <p class="phone-empty">Nog geen berichten</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOE HET WERKT -->
+<section id="hoe-het-werkt" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Proces</p>
+        <h2>Eén telefoontje, <em>van begin tot eind.</em></h2>
+      </div>
+      <p class="lead">Zo verloopt een gesprek met jouw AI-receptionist. Je hoeft er zelf niets voor te doen.</p>
+    </div>
+    <ol class="flow rv">
+      <li>
+        <span class="step">Stap 1 · 0:00</span>
+        <h3>Klant belt jouw nummer</h3>
+        <p>De AI neemt direct op, ook buiten openingstijden of terwijl jij aan het werk bent.</p>
+        <div class="bubble"><span class="meta">AI-receptionist</span>Goedemiddag, praktijk Van Dijk. Waarmee kan ik je helpen?</div>
+      </li>
+      <li>
+        <span class="step">Stap 2 · 0:40</span>
+        <h3>Afspraak wordt ingepland</h3>
+        <p>De AI kijkt live in je agenda en boekt meteen een passend tijdslot. Dubbel boeken kan niet.</p>
+        <div class="bubble"><span class="meta">AI-receptionist</span>Donderdag om 08:30 is er nog plek voor een intake. Zal ik die voor je vastzetten?</div>
+      </li>
+      <li>
+        <span class="step">Stap 3 · 1:15</span>
+        <h3>Klant ontvangt bevestiging</h3>
+        <p>De klant krijgt automatisch een SMS-bevestiging, en de avond ervoor een herinnering.</p>
+        <div class="bubble sms"><span class="meta">SMS · nu</span>Je afspraak staat: do 08:30 bij praktijk Van Dijk. Tot dan!</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- VOOR WIE -->
+<section id="voor-wie" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="kicker">Voor wie</p>
+        <h2>Voor ondernemers die <em>met hun handen</em> werken.</h2>
+      </div>
+      <p class="lead">Actief voor lokale ondernemers in Den Haag, Rijswijk, Voorburg en omstreken. Overal waar klanten bellen voor een afspraak.</p>
+    </div>
+    <div class="who-grid">
+      <a class="scene rv" href="voor-zorgpraktijken.html">
+        <div>
+          <span class="when">Woensdag · 15:15</span>
+          <blockquote>“De fysiotherapeut werkt aan een stijve schouder. Op de balie gaat de telefoon. Na vier keer overgaan valt de lijn stil.”</blockquote>
+        </div>
+        <div class="for">
+          <div><h3>Zorgpraktijken</h3><p>Fysiotherapeuten, tandartsen, mondhygiënisten, osteopaten, chiropractoren</p></div>
+          <span class="go" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <a class="scene rv" href="voor-beauty-en-wellness.html">
+        <div>
+          <span class="when">Vrijdag · 15:45</span>
+          <blockquote>“De masseur heeft haar handen vol olie. De telefoon snijdt door de rustgevende muziek heen, en de klant op tafel schrikt op.”</blockquote>
+        </div>
+        <div class="for">
+          <div><h3>Beauty &amp; wellness</h3><p>Kappers, barbershops, schoonheidsspecialisten, massagepraktijken</p></div>
+          <span class="go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REKENSOM -->
+<section class="navy on-navy" id="rekensom">
+  <div class="wrap calc">
+    <div class="rv">
+      <p class="kicker">Rekensom</p>
+      <h2 style="margin:18px 0 22px">Wat kost <em>niet opnemen</em> jou?</h2>
+      <p class="lead">Schuif met je eigen cijfers en zie wat gemiste oproepen per maand kosten, vergeleken met een AI-receptionist.</p>
+
+      <div class="sliders">
+        <label class="slider">
+          <span class="s-top"><span>Gemiste oproepen per week</span><output id="o-calls">8</output></span>
+          <input type="range" id="s-calls" min="0" max="40" step="1" value="8">
+        </label>
+        <label class="slider">
+          <span class="s-top"><span>Deel daarvan dat een afspraak wil</span><output id="o-share">60%</output></span>
+          <input type="range" id="s-share" min="10" max="100" step="5" value="60">
+        </label>
+        <label class="slider">
+          <span class="s-top"><span>Gemiddelde waarde per afspraak</span><output id="o-value">€ 60</output></span>
+          <input type="range" id="s-value" min="15" max="200" step="5" value="60">
+        </label>
+      </div>
+    </div>
+
+    <div class="calc-out rv" aria-live="polite">
+      <span class="from">Omzet die je nu per maand misloopt</span>
+      <div class="loss" id="c-loss">€ 1.060</div>
+      <div class="bars" aria-hidden="true">
+        <div class="bar-row"><span>Gemist</span><div class="bar"><i id="b-loss"></i></div></div>
+        <div class="bar-row"><span>Campos</span><div class="bar"><i id="b-cost" class="cost"></i></div></div>
+      </div>
+      <ul class="calc-facts">
+        <li><b id="c-appts">18</b> afspraken per maand die naar een ander gaan</li>
+        <li>Na <b id="c-break">3</b> extra afspraken is €149 per maand al terugverdiend</li>
+      </ul>
+      <p class="source" style="margin-top:20px">Rekenvoorbeeld, geen garantie. Gaat ervan uit dat 85% van de bellers die niemand spreekt niet terugbelt (onderzoek zoals aangehaald door Campos Automation) en een maand van 4,33 weken.</p>
+      <a class="btn btn-ivory" href="#contact" style="margin-top:22px">Bespreek jouw situatie <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WAAROM -->
+<section id="waarom" style="background:var(--paper-2)">
+  <div class="wrap why">
+    <div class="rv">
+      <p class="kicker">Waarom Campos Automation</p>
+      <h2 style="margin:18px 0 48px">Een collega die <em>altijd</em> opneemt.</h2>
+      <ul class="facts">
+        <li><b>24/7 bereikbaar</b><span>Ook ’s avonds, in het weekend en tijdens de drukste uren van je dag.</span></li>
+        <li><b>Geen gemiste afspraken</b><span>Elke beller wordt geholpen: boeken, verzetten, afzeggen of een vraag stellen.</span></li>
+        <li><b>Direct bevestiging</b><span>De klant ontvangt automatisch een SMS, zodat niets tussen wal en schip valt.</span></li>
+        <li><b>Snel live</b><span>Binnen 5 werkdagen operationeel. Jij hebt alleen een e-mailadres en een telefoonlijn nodig.</span></li>
+      </ul>
+    </div>
+    <aside class="price rv on-navy" aria-label="Prijs">
+      <span class="from">Vanaf</span>
+      <div class="amt">€149 <small>per maand</small></div>
+      <p style="color:var(--muted-on-navy);font-size:15px">Afhankelijk van de functies die je nodig hebt. In een vrijblijvend gesprek kijken we wat bij jouw zaak past.</p>
+      <ul>
+        <li>Geen langlopend contract</li>
+        <li>Maandelijks opzegbaar</li>
+        <li>Koppeling met je eigen agenda</li>
+        <li>SMS-bevestiging en herinnering</li>
+      </ul>
+      <a class="btn btn-ivory" href="#contact">Plan een gratis demo <span class="arr">→</span></a>
+    </aside>
+  </div>
+</section>
+
+<!-- VERHAAL -->
+<section id="verhaal">
+  <div class="wrap story">
+    <blockquote class="rv">“Het begon met een fysiotherapeut. En een week lang proberen een afspraak te maken.”</blockquote>
+    <div class="body rv">
+      <p>Olivier Campos belde, kreeg de voicemail, belde terug, en de fysiotherapeut was net weg. Dagenlang ging dat zo, tot hij uiteindelijk maar langsliep om het persoonlijk te regelen.</p>
+      <p>De fysiotherapeut deed niets fout: hij stond middenin een behandeling, en die patiënt verdiende zijn volle aandacht. Toch kost niet opnemen hem klanten. <strong style="color:var(--navy)">Campos Automation bestaat om dat ene probleem op te lossen.</strong></p>
+      <a class="link" href="over-ons.html">Lees het hele verhaal</a>
+      <div class="sig">
+        <img src="assets/logo-256.png" alt="">
+        <div><b>Olivier Campos</b><span>Oprichter, Campos Automation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-wrap">
+    <div class="rv">
+      <p class="kicker">FAQ</p>
+      <h2 style="margin-top:18px">Veelgestelde <em>vragen</em></h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Wat is een AI-receptionist?</summary><p>Een slimme voice agent die automatisch jouw telefoon beantwoordt, afspraken inplant in jouw agenda en een SMS-bevestiging stuurt naar de klant. Zonder dat jij iets hoeft te doen.</p></details>
+      <details><summary>Voor welke bedrijven is dit geschikt?</summary><p>Voor lokale dienstverleners zoals kappers, barbershops, tandartsen, fysiotherapeuten en schoonheidssalons. Kortom: elk bedrijf waarbij klanten bellen voor een afspraak.</p></details>
+      <details><summary>Hoe snel ben ik live?</summary><p>Binnen 5 werkdagen nadat we alle benodigde gegevens hebben ontvangen, staat jouw AI-receptionist live.</p></details>
+      <details><summary>Wat heb ik zelf nodig?</summary><p>Alleen een e-mailadres en een telefoonlijn. Wij regelen de rest, van de agenda-koppeling tot de SMS-bevestigingen.</p></details>
+      <details><summary>Wat kost een AI-receptionist?</summary><p>Vanaf €149 per maand, afhankelijk van de functies die je wilt. In een vrijblijvend gesprek bespreken we wat het beste bij jouw onderneming past.</p></details>
+      <details><summary>Kan ik het eerst uitproberen?</summary><p>Ja. Neem contact op voor een vrijblijvende live demo, waarin je de AI-receptionist zelf kunt ervaren.</p></details>
+      <details><summary>Wat gebeurt er buiten openingstijden?</summary><p>De AI-receptionist is 24/7 actief. Klanten kunnen dus ook ’s avonds en in het weekend een afspraak inplannen.</p></details>
+      <details><summary>Kan ik op elk moment opzeggen?</summary><p>Ja. Er is geen langlopend contract: je betaalt per maand en kunt op elk moment stoppen.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="navy on-navy" id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <p class="kicker">Contact</p>
+      <h2>Hoor zelf hoe <em>jouw</em> telefoon wordt opgenomen.</h2>
+      <p class="lead">Plan een vrijblijvende demo, afgestemd op jouw branche. We reageren binnen 24 uur.</p>
+      <ul class="expect">
+        <li>Persoonlijke demo afgestemd op jouw branche</li>
+        <li>Geen verplichtingen, volledig vrijblijvend</li>
+        <li>Binnen 5 werkdagen live met jouw AI-receptionist</li>
+      </ul>
+      <div class="direct">
+        <div><span>E-mail</span><a href="mailto:olivier@camposautomation.nl">olivier@camposautomation.nl</a></div>
+        <div><span>Regio</span>Den Haag, Rijswijk, Voorburg e.o.</div>
+        <div><span>KVK</span>42184285</div>
+      </div>
+    </div>
+    <form class="demo rv" novalidate>
+      <h3>Vraag een demo aan</h3>
+      <p class="hint">Vul in wat je weet, de rest bespreken we samen.</p>
+      <div class="row2">
+        <label class="field"><span>Naam</span><input name="naam" required autocomplete="name"></label>
+        <label class="field"><span>Bedrijf</span><input name="bedrijf" required autocomplete="organization"></label>
+      </div>
+      <div class="row2">
+        <label class="field"><span>Branche</span>
+          <select name="branche">
+            <option>Fysiotherapie</option><option>Tandarts / mondhygiëne</option><option>Osteopaat / chiropractor</option>
+            <option>Kapper / barbershop</option><option>Schoonheidssalon</option><option>Massagepraktijk</option><option>Anders</option>
+          </select>
+        </label>
+        <label class="field"><span>Telefoon</span><input name="telefoon" type="tel" autocomplete="tel"></label>
+      </div>
+      <label class="field"><span>Bericht (optioneel)</span><textarea name="bericht" placeholder="Bijvoorbeeld: hoeveel telefoontjes mis je op een drukke dag?"></textarea></label>
+      <button class="btn" type="submit">Verstuur aanvraag <span class="arr">→</span></button>
+      <p class="form-note">Je mailprogramma opent met een ingevuld bericht aan olivier@camposautomation.nl.</p>
+      <p class="form-ok" role="status">Je mailprogramma is geopend. Verstuur het bericht om je aanvraag af te ronden.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo-256.png" alt="">Campos Automation</a>
+        <p>AI-receptionisten voor lokale ondernemers in Den Haag, Rijswijk, Voorburg en omstreken.</p>
+      </div>
+      <div>
+        <h4>Pagina’s</h4>
+        <ul>
+          <li><a href="voor-zorgpraktijken.html">Voor zorgpraktijken</a></li>
+          <li><a href="voor-beauty-en-wellness.html">Voor beauty &amp; wellness</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="https://camposautomation.nl/blog">Blog ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:olivier@camposautomation.nl">olivier@camposautomation.nl</a></li>
+          <li>KVK 42184285</li>
+          <li><a href="index.html#contact">Plan een gratis demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Campos Automation</span>
+      <span>Redesign-concept · Studio Annema</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
